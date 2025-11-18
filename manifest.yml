@@ -11,3 +11,18 @@ spec:
       ports:
         - containerPort: 80
   restartPolicy: Always      
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testpod2
+  labels:
+    env: test
+spec:
+  containers:
+    - name: c01
+      image: httpd:latest
+      ports:
+        - containerPort: 80
+  restartPolicy: Always     
